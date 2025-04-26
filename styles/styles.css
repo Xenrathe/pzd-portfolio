@@ -8552,33 +8552,33 @@ video {
 }
 
 @font-face {
-  font-family: 'Orbitron';
+  font-family: "Orbitron";
 
-  src: url('../assets/Fonts/Orbitron.ttf') format('truetype');
+  src: url("../assets/Fonts/Orbitron.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'TabletopTavern';
+  font-family: "TabletopTavern";
 
-  src: url('../assets/Fonts/Metamorphous.ttf') format('truetype');
+  src: url("../assets/Fonts/Metamorphous.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Barkpups';
+  font-family: "Barkpups";
 
-  src: url('../assets/Fonts/Sniglet.ttf') format('truetype');
+  src: url("../assets/Fonts/Sniglet.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'OGAS';
+  font-family: "OGAS";
 
-  src: url('../assets/Fonts/Exoplanetaria.ttf') format('truetype');
+  src: url("../assets/Fonts/Exoplanetaria.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'OGAS-TITLE';
+  font-family: "OGAS-TITLE";
 
-  src: url('../assets/Fonts/Assiduous.ttf') format('truetype');
+  src: url("../assets/Fonts/Assiduous.ttf") format("truetype");
 }
 
 :root {
@@ -8593,11 +8593,11 @@ body {
 }
 
 body.dark-mode::before {
-  background-image: url('../assets/BGs/shubham-dhage-4CUBE.jpg');
+  background-image: url("../assets/BGs/shubham-dhage-4CUBE.jpg");
 }
 
 body.light-mode::before {
-  background-image: url('../assets/BGs/shubham-dhage-4CUBE-LM.jpg');
+  background-image: url("../assets/BGs/shubham-dhage-4CUBE-LM.jpg");
 }
 
 body::before {
@@ -8605,7 +8605,7 @@ body::before {
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 1;
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   left: 0px;
@@ -8620,20 +8620,33 @@ body::before {
 .trapezoid-b {
   --trap-width: 500px;
   --trap-height: 100px;
-  clip-path: polygon(var(--trap-height) 0%, calc((var(--trap-width) - var(--trap-height))) 0%, var(--trap-width) 100%, 0px 100%);
+  clip-path: polygon(
+    var(--trap-height) 0%,
+    calc((var(--trap-width) - var(--trap-height))) 0%,
+    var(--trap-width) 100%,
+    0px 100%
+  );
   max-height: var(--trap-height);
   max-width: var(--trap-width);
   border-width: 9px;
   border-style: solid;
   flex-direction: column;
-  font-family: 'Orbitron', 'Roboto', sans-serif;
-  filter: drop-shadow(calc(var(--small-shadow) / 2) var(--small-shadow) 1px rgba(255, 255, 255, 0.2));
+  font-family: "Orbitron", "Roboto", sans-serif;
+  filter: drop-shadow(
+    calc(var(--small-shadow) / 2) var(--small-shadow) 1px
+      rgba(255, 255, 255, 0.2)
+  );
 }
 
 .trapezoid-s {
   --trap-width: 500px;
   --trap-height: 94px;
-  clip-path: polygon(var(--trap-height) 0%, calc((var(--trap-width) - var(--trap-height))) 0%, var(--trap-width) 100%, 0px 100%);
+  clip-path: polygon(
+    var(--trap-height) 0%,
+    calc((var(--trap-width) - var(--trap-height))) 0%,
+    var(--trap-width) 100%,
+    0px 100%
+  );
   height: var(--trap-height);
   width: var(--trap-width);
   flex-direction: column;
@@ -8673,7 +8686,9 @@ body::before {
 }
 
 .triangle-wrap {
-  filter: drop-shadow(calc(var(--small-shadow) / 2) var(--small-shadow) 1px rgb(34, 37, 43, 0.5));
+  filter: drop-shadow(
+    calc(var(--small-shadow) / 2) var(--small-shadow) 1px rgb(34, 37, 43, 0.5)
+  );
 }
 
 .triangle-top-left {
@@ -8692,7 +8707,8 @@ body::before {
   z-index: -1;
 }
 
-.triangle-top-left, .triangle-top-right {
+.triangle-top-left,
+.triangle-top-right {
   width: 120px;
   height: 120px;
 }
@@ -8712,7 +8728,8 @@ body::before {
   transition: transform linear 1s;
 }
 
-.triangle-top-left, .triangle-top-left .triangle-inner {
+.triangle-top-left,
+.triangle-top-left .triangle-inner {
   clip-path: polygon(0 0, 100% 0, 0 100%);
   transform-origin: center;
 }
@@ -8722,7 +8739,8 @@ body::before {
   transform: rotateY(180deg);
 }
 
-.triangle-top-right, .triangle-top-right .triangle-inner {
+.triangle-top-right,
+.triangle-top-right .triangle-inner {
   clip-path: polygon(0 0, 100% 0, 0 100%);
   transform-origin: center;
 }
@@ -8735,15 +8753,18 @@ body::before {
   transform: scale(1.5);
 }
 
-.triangle-wrap:hover .turn.inner, .turn.outer {
+.triangle-wrap:hover .turn.inner,
+.turn.outer {
   z-index: 40;
 }
 
-.triangle-wrap .turn.inner, .triangle-wrap:hover .turn.outer {
+.triangle-wrap .turn.inner,
+.triangle-wrap:hover .turn.outer {
   z-index: -1;
 }
 
-.triangle-top-left, .triangle-top-right {
+.triangle-top-left,
+.triangle-top-right {
   transition: all linear 1s;
 }
 
@@ -8785,17 +8806,20 @@ body::before {
   gap: 10%;
 }
 
-.categories svg, .categories span {
+.categories svg,
+.categories span {
   width: 50px;
   height: 50px;
   cursor: pointer;
 }
 
-.dark-mode .categories svg:hover, .dark-mode .categories .hover {
+.dark-mode .categories .svg-container:hover svg,
+.dark-mode .categories .hover svg {
   fill: black;
 }
 
-.light-mode .categories svg:hover, .light-mode .categories .hover {
+.light-mode .categories .svg-container:hover svg,
+.light-mode .categories .hover svg {
   fill: white;
 }
 
@@ -8809,7 +8833,8 @@ body::before {
   height: 50px;
 }
 
-.categories .theme-selector:hover, .categories .hover-fill {
+.categories .theme-selector:hover,
+.categories .hover-fill {
   border: 2px solid gold;
 }
 
@@ -8840,8 +8865,8 @@ body::before {
 .hexagon {
   width: 200px;
   height: 200px;
-  aspect-ratio: 1/cos(30deg);
-  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+  aspect-ratio: 1 / cos(30deg);
+  clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8858,23 +8883,26 @@ body::before {
   cursor: pointer;
 }
 
-.hw-pop:hover .hexagon{
+.hw-pop:hover .hexagon {
   transform: translateY(-20px);
   transition: background-color 0.25s, color 0.25s, transform 0.5s;
 }
 
-.dark-mode .hw-pop:hover .hexagon{
+.dark-mode .hw-pop:hover .hexagon {
   color: #5b2ead;
   background-color: #ffcb6a;
 }
 
-.light-mode .hw-pop:hover .hexagon{
+.light-mode .hw-pop:hover .hexagon {
   color: #4d1aac;
   background-color: #ffac13;
 }
 
 .hexagon-wrap .TITLE {
-  filter: drop-shadow(calc(var(--small-shadow) / 2) var(--small-shadow) 1px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(
+    calc(var(--small-shadow) / 2) var(--small-shadow) 1px
+      rgba(255, 255, 255, 0.3)
+  );
 }
 
 .hexagon-wrap .TITLE svg {
@@ -8884,7 +8912,9 @@ body::before {
 }
 
 .hexagon-wrap {
-  filter: drop-shadow(calc(var(--small-shadow) / 2) var(--small-shadow) 1px rgb(34, 37, 43, 0.5));
+  filter: drop-shadow(
+    calc(var(--small-shadow) / 2) var(--small-shadow) 1px rgb(34, 37, 43, 0.5)
+  );
   /*transition: all 1s;*/
 }
 
@@ -8900,28 +8930,30 @@ body::before {
 
 .hw-pop:hover {
   z-index: 10;
-  filter: drop-shadow(calc(var(--big-shadow) / 2) var(--big-shadow) 1px rgb(34, 37, 43, 0.3));
+  filter: drop-shadow(
+    calc(var(--big-shadow) / 2) var(--big-shadow) 1px rgb(34, 37, 43, 0.3)
+  );
   transition: filter 0.5s;
   animation: rise 0.5s forwards;
 }
 
 @keyframes rise {
   0% {
-    z-index: 0
+    z-index: 0;
   }
 
   100% {
-    z-index: 10
+    z-index: 10;
   }
 }
 
 @keyframes fall {
   0% {
-    z-index: 10
+    z-index: 10;
   }
 
   100% {
-    z-index: 0
+    z-index: 0;
   }
 }
 
@@ -8990,23 +9022,23 @@ body::before {
 /* TABLETOP TAVERN STUFF */
 
 #ol-ttt {
-  font-family: 'TabletopTavern', 'Roboto', sans-serif;
+  font-family: "TabletopTavern", "Roboto", sans-serif;
 }
 
 /* BARKPUPS STUFF */
 
 #ol-barkpups {
-  font-family: 'Barkpups', 'Roboto', sans-serif;
+  font-family: "Barkpups", "Roboto", sans-serif;
 }
 
 /* OGAS STUFF */
 
 #ol-ogas {
-  font-family: 'OGAS', 'Roboto', sans-serif;
+  font-family: "OGAS", "Roboto", sans-serif;
 }
 
 #ol-ogas .TITLE {
-  font-family: 'OGAS-TITLE', 'Roboto', sans-serif;
+  font-family: "OGAS-TITLE", "Roboto", sans-serif;
   font-size: 35px;
 }
 
